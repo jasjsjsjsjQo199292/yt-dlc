@@ -802,6 +802,7 @@
  - **Shared**: shared.sx
  - **ShowRoomLive**
  - **Sina**
+ - **Shopify:gif**: Shopify Gif
  - **SkylineWebcams**
  - **SkyNews**
  - **skynewsarabia:article**
