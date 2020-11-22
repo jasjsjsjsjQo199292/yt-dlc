@@ -19,3 +19,10 @@ class ShopifyIE(InfoExtractor)
                       
                       
                      
+
+    def _real_extract(self, url):
+        page_id = self._match_id(url)
+        webpage = self._download_webpage(url, page_id)
+
+        page_title = self._og_search_title(webpage, default=None)
+
