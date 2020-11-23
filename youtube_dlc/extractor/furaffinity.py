@@ -53,22 +53,23 @@ class FuraffinityIE(InfoExtractor):
         'url': 'https://www.furaffinity.net/view/19883645/',
         'only_matching': 'True',
         }
-                                                                      
-        return {
-            'id': video_id,
-            'title': self._live_title(title) if is_live else title,
-            'description': clean_html(media.get('description')),
            
-            'duration': int_or_none(metadata.get('duration')) or None,
-            'timestamp': int_or_none(metadata.get('created_time')),
-            'uploader': owner.get('screenname'),
-            'uploader_id': owner.get('id') or metadata.get('screenname'),
-            'age_limit': 18 if metadata.get('explicit') else 0,
-            'tags': metadata.get('tags'),
-            'view_count': get_count('views') or int_or_none(media.get('audienceCount')),
-           
-            'formats': formats,
-           
-           
-        }
+def _real_extract(self, url):
+        media_id = self._match_id(url)
+        formats = []
+        uploader = None
+        webpage = self._download_webpage(url, media_id)
 
+        title = self._html_search_regex(
+            r'<title>([^>]+)</title>', webpage, 'title')
+
+        media_url_string = self._search_regex(
+            r'"url"\s*:\s*("[^"]+"),', webpage, 'media url', default=None, fatal=False)
+
+        if media_url_string:
+            media_url = self._parse_json(media_url_string, media_id)
+            formats = [{
+                'url': media_url,
+                'format_id': 'source',
+                'quality': 1,
+            }]
