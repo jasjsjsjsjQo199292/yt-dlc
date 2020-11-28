@@ -29,7 +29,7 @@ Carefully read and work through this check list in order to prevent the most com
 -->
 
 - [ ] I'm reporting a new site support request
-- [ ] I've verified that I'm running youtube-dlcc version **2020.10.31**
+- [ ] I've verified that I'm running YouTube&image-dlc version **2020.10.31**
 - [ ] I've checked that all provided URLs are alive and playable in a browser
 - [ ] I've checked that none of provided URLs violate any copyrights
 - [ ] I've searched the bugtracker for similar site support requests including closed ones
