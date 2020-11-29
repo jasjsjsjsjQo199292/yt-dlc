@@ -4,9 +4,9 @@
 [![Gitter chat](https://img.shields.io/gitter/room/youtube-dlc/community)](https://gitter.im/youtube-dlc) 
 [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](https://github.com/blackjack4494/yt-dlc/blob/master/LICENSE)
 
-youtube-dlc - download videos from youtube.com or other video platforms.
+youtube&image-dlc - download videos from youtube.com or other video or image (Image Downlader WIP) platforms.
 
-youtube-dlc is a fork of youtube-dl with the intention of getting features tested by the community merged in the tool faster, since youtube-dl's development seems to be slowing down. (https://web.archive.org/web/20201014194602/https://github.com/ytdl-org/youtube-dl/issues/26462)
+youtubeai-dlc is a fork of youtube-dlc with the intention of getting features tested by the community merged in the tool faster, since youtube-dl's development seems to be slowing down. (https://web.archive.org/web/20201014194602/https://github.com/ytdl-org/youtube-dl/issues/26462)
 
 - [INSTALLATION](#installation)
 - [UPDATE](#update)
